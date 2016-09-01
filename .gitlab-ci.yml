@@ -1,0 +1,34 @@
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm install
+    - npm test
+  only:
+    - master
+
+build:
+  stage: build
+  only:
+    - master
+  cache:
+    untracked: true
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    name: "${CI_BUILD_STAGE}_${CI_BUILD_REF_NAME}"
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  environment: staging
+  script:
+    - ./deploy.sh
+  only:
+    - master

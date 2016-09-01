@@ -1,0 +1,11 @@
+<li uib-dropdown is-open="$ctrl.isRightMenuOpen" class="dropdown">
+  <a uib-dropdown-toggle href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentLang | uppercase}}<b class="caret"></b></a>
+  <ul uib-dropdown-menu class="dropdown-menu">
+    <li  ng-click="changeLanguage('pl')" ui-sref-active="active"role="menuitem">
+      <a href="#">PL</a>
+    </li>
+    <li  ng-click="changeLanguage('en')" ui-sref-active="active"role="menuitem">
+      <a href="#">EN</a>
+    </li>
+  </ul>
+</li>

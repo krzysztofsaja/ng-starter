@@ -1,0 +1,20 @@
+<navbar></navbar>
+<div class="test">
+  <table class="table table-hover">
+  	<thead>
+  		<tr>
+  			<th>{{'common.id' | translate}}</th>
+  			<th>{{'common.title' | translate}}</th>
+  			<th>{{'common.body' | translate}}</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr  ng-repeat="el in $ctrl.testList">
+  			<td>{{el.id}}</td>
+  			<td>{{el.title}}</td>
+  			<td>{{el.body}}</td>
+  		</tr>
+  	</tbody>
+  </table>
+
+</div>

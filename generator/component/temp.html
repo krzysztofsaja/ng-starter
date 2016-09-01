@@ -1,0 +1,12 @@
+<header>
+  <navbar></navbar>
+</header>
+
+<main>
+  <div class="<%= name %>">
+    <h1>{{ $ctrl.name }}</h1>
+    <ul>
+      <li ng-repeat="el in $ctrl.<%= name %>List">{{el}}</li>
+    </ul>
+  </div>
+</main>

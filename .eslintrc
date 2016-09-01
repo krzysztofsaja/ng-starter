@@ -1,0 +1,40 @@
+{
+  "extends": ["airbnb-base"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "jasmine": true,
+    "jquery": true,
+    "es6": true
+  },
+  "globals": {
+    // Put things like jQuery, etc
+    "jQuery": true,    // jQuery
+    "$": true, // jQuery shortcut
+    "$window": true,
+    "hljs": true // hightlight.js
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "import/ignore": ["node_modules", "vendor"],
+    "import/resolver": "webpack"
+  },
+
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "max-len":[0],
+    "no-unused-vars": [0],
+    "no-multi-spaces": [0],
+    "global-require": [0],
+    "new-cap": [0],
+    "no-param-reassign": [0]
+  }
+}
